@@ -1,11 +1,13 @@
 require 'rubygems'
 require 'rake'
 require 'rspec/core/rake_task'
+require 'lib/sprinkle/version'
 
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "sprinkle"
+    gem.version = Sprinkle::Version
     gem.summary = "Ruby DSL based software provisioning tool"
     gem.description = "Ruby DSL based software provisioning tool"
     gem.email = "crafterm@redartisan.com"
@@ -54,7 +56,7 @@ rescue LoadError
   require 'rake/rdoctask' 
 end
 Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
+  version = Sprinkle::Version
 
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = "sprinkle #{version}"
