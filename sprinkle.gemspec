@@ -3,9 +3,11 @@
 # Instead, edit Jeweler::Tasks in Rakefile, and run 'rake gemspec'
 # -*- encoding: utf-8 -*-
 
+require 'lib/sprinkle/version.rb'
+
 Gem::Specification.new do |s|
   s.name = %q{sprinkle}
-  s.version = "0.4.2"
+  s.version = Sprinkle::Version
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Marcus Crafter"]
@@ -15,8 +17,8 @@ Gem::Specification.new do |s|
   s.email = %q{crafterm@redartisan.com}
   s.executables = ["sprinkle"]
   s.extra_rdoc_files = [
-    "README.markdown",
-    "TODO"
+    "README.markdown"
+    # "TODO"
   ]
   s.files = [
     "CREDITS",
